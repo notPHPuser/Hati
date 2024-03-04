@@ -7,6 +7,7 @@ import Sell from './pages/sell/Sell';
 import LoginOrReg from './components/log-res/LoginOrReg';
 import OfrtenFlat from './pages/OftenList/buyFlat/OfrtenFlat';
 import BuyRoom from './pages/OftenList/buyRoom/BuyRoom';
+import ListReg from './components/log-res/ListReg';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: '/buyRoom',
     element: <BuyRoom />,
+  },
+  {
+    path: '/listReg',
+    element: <ListReg />,
   },
 ]);
 
