@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './buy.css';
 import WhereBuy from './whereBuy/WhereBuy';
 import HowRooms from './howRooms/HowRooms';
+import Price from './price/Price';
 
 function Buy() {
   const [ChoseWhereBuy, ChosesetWhereBuy] = useState(false);
   const [howrooms, setrooms] = useState(false);
+  const [price, setPrice] = useState(false);
 
   function hideHati() {
     ChosesetWhereBuy(!ChoseWhereBuy);
@@ -22,6 +24,11 @@ function Buy() {
     document.getElementById('howRooms').classList.add('showItems');
   }
 
+  function hidePrice() {
+    setPrice(!price);
+    document.getElementById('price').style.display = 'block';
+  }
+
   return (
     <>
       <div className='buy-main-choice'>
@@ -33,7 +40,9 @@ function Buy() {
         <button onClick={hideRooms} className='how-many-rooms'>
           Комнат
         </button>
-        <button className='cena-for-hati'>Цена</button>
+        <button onClick={hidePrice} className='cena-for-hati'>
+          Цена
+        </button>
         <input type='text' className='search-menu' placeholder='Город, адрес, метро' />
       </div>
       {ChoseWhereBuy && (
@@ -44,6 +53,12 @@ function Buy() {
       {howrooms && (
         <div id='howRooms' className='howRooms'>
           <HowRooms />
+        </div>
+      )}
+
+      {price && (
+        <div id='price'>
+          <Price />
         </div>
       )}
     </>

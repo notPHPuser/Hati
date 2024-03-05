@@ -23,7 +23,7 @@ function LoginOrReg() {
         <h1>Зарегестироваться</h1>
         <p>
           Уже есть аккаунт?{' '}
-          <a className='voiti' href=''>
+          <a className='enter' href=''>
             Войти
           </a>
         </p>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './testPost.css';
 import axios from 'axios';
 
 function ListReg() {
@@ -19,7 +20,7 @@ function ListReg() {
     <>
       <div>
         <h2 className='text'>Posts</h2>
-        <ul>
+        <ul className='test_posts'>
           {posts.map((post) => (
             <li key={post.id}>
               <h3>{post.title}</h3>

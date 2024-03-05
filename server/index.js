@@ -4,11 +4,12 @@ const sequelize = require('./db');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const router = require('./routes/index');
+
 const PORT = process.env.PORT || 5002;
 
 const app = express();
 
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cors());
