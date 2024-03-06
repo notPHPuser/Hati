@@ -23,8 +23,9 @@ function ListReg() {
         <ul className='test_posts'>
           {posts.map((post) => (
             <li key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
+              <h3>{post.email}</h3>
+              <p>{post.login}</p>
+              <p>{post.password}</p>
             </li>
           ))}
         </ul>

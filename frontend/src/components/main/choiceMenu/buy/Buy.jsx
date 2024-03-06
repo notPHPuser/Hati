@@ -11,10 +11,10 @@ function Buy() {
 
   function hideHati() {
     ChosesetWhereBuy(!ChoseWhereBuy);
-    document.getElementById('howRooms').classList.add('hide');
     if ((document.getElementById('whereBuy').style.display = 'none')) {
       document.getElementById('arrow').classList.add('arrow-rotate');
     }
+    document.getElementById('howRooms').classList.add('hide');
   }
 
   function hideRooms() {

@@ -3,15 +3,17 @@ import axios from 'axios';
 import './log-res.css';
 
 function LoginOrReg() {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
 
   const addPost = async () => {
     try {
-      await axios.post('http://localhost:5001/api/posts', { title, body });
+      await axios.post('http://localhost:5001/api/posts', { login, password, email });
 
-      setTitle('');
-      setBody('');
+      setLogin('');
+      setPassword('');
+      setEmail('');
     } catch (error) {
       console.error(error);
     }
@@ -30,15 +32,23 @@ function LoginOrReg() {
         <form onSubmit={addPost}>
           <input
             type='text'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder='title'
+            value={login}
+            onChange={(e) => setLogin(e.target.value)}
+            placeholder='login'
+            required
+          />
+          <input
+            type='text'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder='email'
             required
           />
           <textarea
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-            placeholder='Bpdy'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder='password'
+            type='password'
             required
           />
           <button type='submit'>Add Post</button>
