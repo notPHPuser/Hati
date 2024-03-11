@@ -1,8 +1,10 @@
 .register {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   left: 500px;
   top: 80px;
   position: absolute;
+  display: flex;
+  justify-content: center;
   width: 500px;
   height: 500px;
   align-items: center;
@@ -11,37 +13,47 @@
 .enter {
   color: rgb(92, 92, 234);
 }
-.email {
-  position: relative;
-  width: 300px;
-  font-size: 17px;
-  top: 30px;
-  border: none;
-  border-bottom: 2px solid rgb(92, 92, 234);
-  background-color: transparent;
-  color: inherit;
-  outline: none;
-}
-.password {
-  position: relative;
-  width: 300px;
-  font-size: 17px;
-  top: 60px;
-  border: none;
-  border-bottom: 2px solid rgb(92, 92, 234);
-  background-color: transparent;
-  color: inherit;
+
+input {
   outline: none;
 }
 
-.password-check {
+.reg_info {
   position: relative;
-  width: 300px;
-  font-size: 17px;
-  top: 90px;
+  left: -150px;
+  top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 350px;
+  background-color: inherit;
+}
+
+.reg-text {
+  position: relative;
+  top: -150px;
+  left: 180px;
+}
+.reg_button {
+  position: relative;
+  background-color: rgb(92, 92, 234);
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  transition: 0.2s ease;
+  top: 30px;
+  left: -149px;
+}
+
+.reg_button:hover {
+  background-color: rgb(54, 54, 243);
+}
+
+button,
+button:active,
+button:focus {
   border: none;
-  border-bottom: 2px solid rgb(92, 92, 234);
-  background-color: transparent;
-  color: inherit;
-  outline: none;
 }

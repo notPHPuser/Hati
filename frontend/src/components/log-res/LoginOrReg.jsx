@@ -22,15 +22,18 @@ function LoginOrReg() {
   return (
     <>
       <div className='register'>
-        <h1>Зарегестироваться</h1>
-        <p>
-          Уже есть аккаунт?{' '}
-          <a className='enter' href=''>
-            Войти
-          </a>
-        </p>
+        <div className='reg-text'>
+          <h1>Зарегестироваться</h1>
+          <p>
+            Уже есть аккаунт?{' '}
+            <a className='enter' href=''>
+              Войти
+            </a>
+          </p>
+        </div>
         <form onSubmit={addPost}>
           <input
+            className='reg_info'
             type='text'
             value={login}
             onChange={(e) => setLogin(e.target.value)}
@@ -38,20 +41,24 @@ function LoginOrReg() {
             required
           />
           <input
+            className='reg_info'
             type='text'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder='email'
             required
           />
-          <textarea
+          <input
+            className='reg_info'
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder='password'
             type='password'
             required
           />
-          <button type='submit'>Add Post</button>
+          <button className='reg_button' type='submit'>
+            Зарегестрироваться
+          </button>
         </form>
       </div>
     </>
