@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './log-res.css';
+import { Link } from 'react-router-dom';
 
 function LoginOrReg() {
   const [login, setLogin] = useState('');
@@ -60,6 +61,9 @@ function LoginOrReg() {
             Зарегестрироваться
           </button>
         </form>
+        <Link className='link_to_hati' to='/'>
+          На глувную страницу
+        </Link>
       </div>
     </>
   );
