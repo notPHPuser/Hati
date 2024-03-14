@@ -9,6 +9,7 @@ import OfrtenFlat from './pages/OftenList/buyFlat/OfrtenFlat';
 import BuyRoom from './pages/OftenList/buyRoom/BuyRoom';
 import ListReg from './components/log-res/ListReg';
 import App from './App.jsx';
+import Create from './pages/create_announcement/Create.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/listReg',
     element: <ListReg />,
+  },
+  {
+    path: '/create',
+    element: <Create />,
   },
 ]);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import profile from '../../assets/profile.png';
 import liked from '../../assets/heart.png';
 import bell from '../../assets/bell.png';
@@ -106,9 +106,9 @@ const Header = () => {
             <p className='liked-info-text'>Понравилось</p>
           </div>
         </a>
-        <a href='#' className='plus'>
+        <Link to='/create' className='plus'>
           +Разместить бесплатно
-        </a>
+        </Link>
         <Link className='profile-href' to='/log-res'>
           <img className='profile-photo' src={profile} alt='' />
           <div className='profile-info'>

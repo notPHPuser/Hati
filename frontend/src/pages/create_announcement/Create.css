@@ -1,0 +1,71 @@
+.create_a {
+  position: absolute;
+  width: 700px;
+  height: 600px;
+  box-shadow: 0px 0px 28px 6px rgba(0, 0, 0, 0.1);
+  left: 100px;
+  z-index: -1;
+  border-radius: 10px;
+  left: 600px;
+}
+
+.new_create {
+  position: absolute;
+  left: 40px;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.new_deal {
+  position: absolute;
+  left: 40px;
+  top: 60px;
+}
+
+.deal_options {
+  background-color: inherit;
+  border: 0.2px solid #4a5a81;
+  position: relative;
+  margin-left: 10px;
+  height: 35px;
+  width: 85px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 3px;
+  top: 110px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.deal_options:focus {
+  border: 0.2px solid #4a5a81;
+  background-color: #f3f6ff;
+}
+
+.new_arenda {
+  position: absolute;
+  left: 40px;
+  top: 160px;
+}
+
+.arenda_options {
+  background-color: inherit;
+  border: 0.2px solid #4a5a81;
+  position: relative;
+  margin-left: 10px;
+  height: 35px;
+  width: 120px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 3px;
+  top: 210px;
+  left: -159px;
+  cursor: pointer;
+}
+
+.arenda_options:focus {
+  border: 0.2px solid #4a5a81;
+  background-color: #f3f6ff;
+}
