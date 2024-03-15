@@ -177,6 +177,14 @@ header {
   font-size: 13px;
 }
 
+.liked-photo {
+  transition: 0.2s ease;
+}
+
+.liked-photo:hover {
+  transform: scale(1.2);
+}
+
 .liked-href:hover .liked-info {
   display: block;
 }

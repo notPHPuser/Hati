@@ -10,6 +10,7 @@ import BuyRoom from './pages/OftenList/buyRoom/BuyRoom';
 import ListReg from './components/log-res/ListReg';
 import App from './App.jsx';
 import Create from './pages/create_announcement/Create.jsx';
+import Profile from './pages/profile/Profile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: '/create',
     element: <Create />,
+  },
+  {
+    path: '/profile',
+    element: <Profile />,
   },
 ]);
 
