@@ -181,8 +181,40 @@ header {
   transition: 0.2s ease;
 }
 
-.liked-photo:hover {
-  transform: scale(1.2);
+.liked-href:hover .liked-photo {
+  transform: scale(1.1);
+}
+
+.bell-photo {
+  transition: 0.2s ease;
+}
+
+.bell-href:hover .bell-photo {
+  transform: scale(1.1);
+}
+
+.house-photo {
+  transition: 0.2s ease;
+}
+
+.house-href:hover .house-photo {
+  transform: scale(1.1);
+}
+
+.chat-photo {
+  transition: 0.2s ease;
+}
+
+.chat-href:hover .chat-photo {
+  transform: scale(1.1);
+}
+
+.glass-photo {
+  transition: 0.2s ease;
+}
+
+.glass-href:hover .glass-photo {
+  transform: scale(1.1);
 }
 
 .liked-href:hover .liked-info {
