@@ -6,9 +6,14 @@ import { useState } from 'react';
 function Create() {
   const [arenda, setArenda] = useState(false);
   const [sale, setSale] = useState(false);
+  const [long, setLong] = useState(false);
 
   function ifArenda() {
     setArenda(!arenda);
+  }
+
+  function ifLong() {
+    setLong(!long);
   }
 
   function ifSale() {
@@ -35,17 +40,24 @@ function Create() {
         <button onClick={ifArenda} className='deal_options'>
           Аренда
         </button>
-
-        <button onClick={ifSale} className='deal_options'>
-          Продажа
-        </button>
         {arenda && (
           <div className='if_arenda'>
             <p className='new_arenda'>Аренда</p>
-            <button className='arenda_options'>Долгострочная</button>
+            <button onClick={ifLong} className='arenda_options'>
+              Долгострочная
+            </button>
             <button className='arenda_options'>Посуточная</button>
           </div>
         )}
+        {long && (
+          <div className='longArenda'>
+            <p>Жилая недвижемость</p>
+          </div>
+        )}
+        <button onClick={ifSale} className='deal_options'>
+          Продажа
+        </button>
+
         {sale && <div className='wqe'>wqe</div>}
       </div>
     </>

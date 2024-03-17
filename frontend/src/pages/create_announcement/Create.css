@@ -47,7 +47,7 @@
 .new_arenda {
   position: absolute;
   left: 40px;
-  top: 160px;
+  top: 130px;
 }
 
 .arenda_options {
@@ -96,4 +96,18 @@
   top: 300px;
   left: 150px;
   z-index: -1;
+}
+
+.if_arenda {
+  position: absolute;
+}
+
+.wqe {
+  position: absolute;
+}
+
+.longArenda {
+  position: absolute;
+  left: 40px;
+  top: 270px;
 }
