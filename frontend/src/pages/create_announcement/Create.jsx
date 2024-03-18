@@ -7,6 +7,7 @@ function Create() {
   const [arenda, setArenda] = useState(false);
   const [sale, setSale] = useState(false);
   const [long, setLong] = useState(false);
+  const [arendaDay, setarendaDay] = useState(false);
 
   function ifArenda() {
     setArenda(!arenda);
@@ -18,6 +19,10 @@ function Create() {
 
   function ifSale() {
     setSale(!sale);
+  }
+
+  function ifArendaDay() {
+    setarendaDay(!arendaDay);
   }
 
   return (
@@ -46,12 +51,25 @@ function Create() {
             <button onClick={ifLong} className='arenda_options'>
               Долгострочная
             </button>
-            <button className='arenda_options'>Посуточная</button>
+            <button onClick={ifArendaDay} className='arenda_options'>
+              Посуточная
+            </button>
           </div>
         )}
         {long && (
           <div className='longArenda'>
             <p>Жилая недвижемость</p>
+            <button className='long_options'>Квартира</button>
+            <button className='long_options'>Комната</button>
+            <button className='long_options'>Коттедж</button>
+          </div>
+        )}
+        {arendaDay && (
+          <div className='arendaDay'>
+            <p>Объект</p>
+            <button className='day_option'>Квартира</button>
+            <button className='day_option'>Комната</button>
+            <button className='day_option'>Дом</button>
           </div>
         )}
         <button onClick={ifSale} className='deal_options'>
@@ -59,6 +77,9 @@ function Create() {
         </button>
 
         {sale && <div className='wqe'>wqe</div>}
+        <a href='#' className='create_myself'>
+          Создать самому
+        </a>
       </div>
     </>
   );
