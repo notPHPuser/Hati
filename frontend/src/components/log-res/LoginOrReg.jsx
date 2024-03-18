@@ -27,9 +27,9 @@ function LoginOrReg() {
           <h1>Зарегестироваться</h1>
           <p>
             Уже есть аккаунт?{' '}
-            <a className='enter' href=''>
+            <Link to='/enter' className='enter'>
               Войти
-            </a>
+            </Link>
           </p>
         </div>
         <form onSubmit={addPost}>

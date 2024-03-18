@@ -2,6 +2,7 @@ import React from 'react';
 import './Create.css';
 import Header from '../../components/header/Header';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Create() {
   const [arenda, setArenda] = useState(false);
@@ -11,6 +12,8 @@ function Create() {
 
   function ifArenda() {
     setArenda(!arenda);
+    document.getElementById('create_arenda').classList.add('deal_add');
+    document.getElementById('create_sale').classList.remove('deal_add');
   }
 
   function ifLong() {
@@ -19,6 +22,8 @@ function Create() {
 
   function ifSale() {
     setSale(!sale);
+    document.getElementById('create_sale').classList.add('deal_add');
+    document.getElementById('create_arenda').classList.remove('deal_add');
   }
 
   function ifArendaDay() {
@@ -42,7 +47,8 @@ function Create() {
       <div className='create_a'>
         <p className='new_create'>Новое объявление</p>
         <p className='new_deal'>Сделка</p>
-        <button onClick={ifArenda} className='deal_options'>
+
+        <button id='create_arenda' onClick={ifArenda} className='deal_options'>
           Аренда
         </button>
         {arenda && (
@@ -72,14 +78,14 @@ function Create() {
             <button className='day_option'>Дом</button>
           </div>
         )}
-        <button onClick={ifSale} className='deal_options'>
+        <button id='create_sale' onClick={ifSale} className='deal_options'>
           Продажа
         </button>
 
         {sale && <div className='wqe'>wqe</div>}
-        <a href='#' className='create_myself'>
+        <Link to='/create_own' className='create_myself'>
           Создать самому
-        </a>
+        </Link>
       </div>
     </>
   );

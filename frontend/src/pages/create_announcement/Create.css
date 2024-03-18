@@ -44,6 +44,11 @@
   background-color: #f3f6ff;
 }
 
+.deal_add {
+  border: 2px solid var(--main-hover);
+  background-color: #f3f6ff;
+}
+
 .new_arenda {
   position: absolute;
   left: 40px;

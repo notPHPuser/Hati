@@ -11,6 +11,8 @@ import ListReg from './components/log-res/ListReg';
 import App from './App.jsx';
 import Create from './pages/create_announcement/Create.jsx';
 import Profile from './pages/profile/Profile.jsx';
+import CreateMyself from './pages/create_myself/CreateMyself.jsx';
+import AlreadyHave from './components/log-res/AlreatyHave/AlreadyHave.jsx';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
   {
     path: '/profile',
     element: <Profile />,
+  },
+  {
+    path: '/create_own',
+    element: <CreateMyself />,
+  },
+  {
+    path: '/enter',
+    element: <AlreadyHave />,
   },
 ]);
 
