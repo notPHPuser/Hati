@@ -57,3 +57,11 @@
 .li_possibilities:hover {
   background-color: rgb(243, 242, 242);
 }
+
+.photo_in_profile {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: -5px;
+}

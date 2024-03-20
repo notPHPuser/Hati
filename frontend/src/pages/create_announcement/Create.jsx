@@ -18,6 +18,8 @@ function Create() {
 
   function ifLong() {
     setLong(!long);
+    document.getElementById('long_arenda').classList.add('deal_add');
+    document.getElementById('day_arenda').classList.remove('deal_add');
   }
 
   function ifSale() {
@@ -28,6 +30,8 @@ function Create() {
 
   function ifArendaDay() {
     setarendaDay(!arendaDay);
+    document.getElementById('day_arenda').classList.add('deal_add');
+    document.getElementById('long_arenda').classList.remove('deal_add');
   }
 
   return (
@@ -54,10 +58,10 @@ function Create() {
         {arenda && (
           <div className='if_arenda'>
             <p className='new_arenda'>Аренда</p>
-            <button onClick={ifLong} className='arenda_options'>
+            <button id='long_arenda' onClick={ifLong} className='arenda_options'>
               Долгострочная
             </button>
-            <button onClick={ifArendaDay} className='arenda_options'>
+            <button id='day_arenda' onClick={ifArendaDay} className='arenda_options'>
               Посуточная
             </button>
           </div>
